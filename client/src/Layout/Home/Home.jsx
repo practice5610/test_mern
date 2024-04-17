@@ -15,7 +15,7 @@ class Home extends Component {
 
   async componentDidMount() {
     try {
-      const students = await axios("/api/students/");
+      const students = await axios("/backend/api/students/");
       this.setState({ data: students.data });
     } catch (err) {
       this.setState({ error: err.message });
